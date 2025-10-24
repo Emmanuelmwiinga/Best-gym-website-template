@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym-template</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="js/locomotive-scroll.min.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b8aca2410.js"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav-bar" class="navbar" 
+     data-scroll 
+     data-scroll-sticky 
+     data-scroll-target="main">
+    <div class="navbar-logo">
+    <span class="logo-icon"><img src="assets/barbel.png" class="colour-png"></span
+    <h2>Best gym</h2>
+    </div>
+  <ul>
+    <li><a href="#" data-target="home">Home</a></li>
+    <li><a href="#" data-target="about">About</a></li>
+    <li><a href="#" data-target="services">Services</a></li>
+    <li><a href="#" data-target="training">Training</a></li>
+    <li><a href="contact.html" data-target="contact">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+  
+  <main data-scroll-container>
+  <!--Hero section-->
+  <div class="hero" data-scroll-section id="home">
+    <div class="progress-bar">
+      <p>Loading/<span id="counter">0</span></p>
+    </div>
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="video/banner.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="header">
+      <h1><span>Best Gym</span></h1>
+      <h1><span>In</span></h1>
+      <h1><span>Town</span></h1>
+      <p><span>JOIN NOW</span></p>
+    </div>
+
+
+    <div class="codes">
+      <p>&#9679</p>
+      <p>&#9679</p>
+    </div>
+    
+      <div class="hero-cards">
+      <div class="cards">
+        <p>REVIEWS</p>
+        <p class="review-items"><img src="assets/client.png" width="20px" height="25px"><span>John doe</span></p>
+        <p class="review-text"><span>Definetly the best gym in town with the best equipment.</span></p>
+        <br>
+        <p class="card-text">5.0</p>
+        <p><img src="assets/star.svg" alt="star"><img src="assets/star.svg" alt="star"><img src="assets/star.svg" alt="star"><img src="assets/star.svg" alt="star"><img src="assets/star.svg" alt="star"></p>
+      </div>
+      <div class="cards">
+        <p class="support"><span><img src="assets/support.png" height="20px"></span>&nbsp;24/7</p>
+        <p>SUPPORT</p>
+        <p class="hero-cta"><a href="tel:+1234567890">CALL NOW <img src="assets/call.png" alt="call"></a></p>
+      </div>
+    </div>
+  </div>
+<!--End of hero section-->
+
+<!--About section-->
+<section id="about" data-scroll-section>
+  <h3 class="main-text">ABOUT US</h3>
+  <div class="about-container">
+    <div class="about-left"><img src="assets/about.jpg" alt="about"></div>
+    <div class="about-right">
+      <h4 class="main-text">100 YEARS EXPERIENCE</h4>
+    <div class="about-icons">
+      <div class="about-items"><img src="assets/dumbbell.png" height="64px" width="64px">
+       <h3 class="main-text">Certified Gym Center</h3>
+      </div>
+      <div class="about-items"><img src="assets/award.png" height="64px" width="64px" class="colour-png">
+       <h3 class="main-text">Award Winning</h3>
+      </div>
+    </div>
+    <span class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni ipsam cupiditate fugiat consequuntur excepturi, architecto perferendis unde dolore numquam molestiae aliquam, quae amet, placeat ex a odit sint repellendus.</span>
+  <div class="about-cta-container">
+  <a href="" class="about-cta">JOIN NOW</a>
+  </div>
+  </div>
+  </div>
+</section>
+<!--End of About section-->
+
+<section id="services" data-scroll-section>
+  <h3 class="main-text" class="services-title">SERVICES</h3> 
+  <div class="services-container">
+    <div class="services-left">
+      <div class="services-left-items">
+        <img src="assets/dumbbell.png">
+        <br>
+        <h4 class="main-text">BEST EQUIPMENT</h4>
+        <br>
+        <P class="main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel beatae quisquam suscipit placeat neque esse.</P>
+      </div>
+      <div class="services-left-items">
+        <img src="assets/u-2.png" height="64">
+        <br>
+        <h4 class="main-text">NUTRITION PLAN</h4>
+        <br>
+        <P class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus repellendus placeat numquam explicabo, sint ab ipsam! Tempore maxime sequ.</P>
+      </div>
+    </div>
+    <div class="services-right">
+      <div class="services-right-items">
+        <img src="assets/u-3.png">
+        <br>
+        <h4 class="main-text">SHOWER SERVICES</h4>
+        <br>
+        <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt error architecto atque repellendus repudiandae enim animi maiores vitae ex expedita quos ipsam.</p>
+      </div>
+      <div class="services-right-items">
+        <img src="assets/u-4.png" height="64px">
+        <br>
+        <h4 class="main-text">CUSTOM TRAINING PLAN</h4>
+        <br>
+        <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat beatae libero vitae dolorum nihil dolore pariatur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End of services section-->
+
+<!--Training section-->
+<section id="training" data-scroll-section>
+  <h3 class="main-text">TRAINING</h3>
+  <div class="training-container">
+    <div class="training-container-left">
+      <h4 class="training-text-left">MUSCLE BUILDING</h4>
+      <br>
+      <p class="training-text-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <br>
+      <div class="left-img"><img src="assets/muscle.png" class="training-img"></div>
+      <div class="training-cta-container">
+  <a href="" class="training-cta">JOIN NOW</a>
+  </div>
+    </div>
+    <div class="training-container-right">
+      <h4 class="training-text-right">BODY BUILDING</h4>
+      <br>
+      <p class="training-text-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <br>
+      <img src="assets/gym.png">
+      <div class="about-cta-container">
+  <a href="" class="about-cta">JOIN NOW</a>
+  </div>
+    </div>
+  </div>
+
+  <section id="trainers">
+    <h3 class="main-text">OUR TRAINERS</h3>
+    <div class="trainers-container" data-scroll data-scroll-direction="horizontal" data-scroll-speed="5">
+      <div class="trainer-card">
+        <span class="trainer-img"><img src="assets/team-1.jpg"></span>
+        <h4 class="main-text">JOHN DOE</h4>
+        <p>Trainer</p>
+        <a class="trainer-icons" href=""><img src="assets/facebook-logo-button.png" alt="facebook-logo-button"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/instagram.png" alt="instagram-logo"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/linkedin.png" alt="linkedin-logo"></img></a>
+      </div>
+      <div class="trainer-card">
+        <span class="trainer-img"><img src="assets/team-2.jpg"></span>
+        <h4 class="main-text">JOHN DOE</h4>
+        <p>Trainer</p>
+        <a class="trainer-icons" href=""><img src="assets/facebook-logo-button.png" alt="facebook-logo-button"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/instagram.png" alt="instagram-logo"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/linkedin.png" alt="linkedin-logo"></img></a>
+      </div>
+      <div class="trainer-card">
+        <span class="trainer-img"><img src="assets/team-1.jpg"></span>
+        <h4 class="main-text">JOHN DOE</h4>
+        <p>Trainer</p>
+        <a class="trainer-icons" href=""><img src="assets/facebook-logo-button.png" alt="facebook-logo-button"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/instagram.png" alt="instagram-logo"></img></a>
+        <a class="trainer-icons" href=""><img src="assets/linkedin.png" alt="linkedin-logo"></img></a>
+      </div>
+    </div>
+  </section>
+</section>
+<!--End of training section-->
+
+<section id="why" data-scroll-section>
+  <h3 class="main-text">WHY CHOOSE US?</h3>
+  <div class="why-container">
+    <div class="why-items">
+      <img src="assets/u-2.png">
+      <br>
+      <h4 class="main-text">NUTRITION PLAN</h4>
+      <br>
+      <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="why-items">
+      <img src="assets/u-3.png">
+      <br>
+      <h4 class="main-text">SHOWERING SERVICES</h4>
+      <br>
+      <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="why-items">
+      <img src="assets/dumbbell.png">
+      <br>
+      <h4 class="main-text">QUALITY EQUIPMENT</h4>
+      <br>
+      <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, sed.</p>
+    </div>
+  </div>
+</section>
+<!--End of why section-->
+
+<!--Pricing cards-->
+
+<section id="Pricing-cards" data-scroll-section>
+  <h3>Choose your plan</h3>
+  <div class="price-cards-container">
+    <div class="price-card">
+      <div class="card-header">
+        <h2>BASIC</h2>
+        <div class="price-icons">
+        <i class="fas fa-rocket"></i>
+        </div>
+        <div class="pricing-desc">
+        <div class="currency">$</div>
+        <div class="pricing">9</div>
+        <div class="period">/month</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><span class="fas fa-check"></span>5 days a week of training</li>
+          <li><span class="fas fa-check"></span>Free coffee</li>
+          <li><span class="fas fa-check"></span>Access to equipment</li>
+          <li class="disabled"><i class="fas fa-times"></i>Training classes</li>
+          <li class="disabled"><i class="fas fa-times"></i>Nutrition plan</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div class="price-btn">
+          <a href="">Get started<i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="price-card-pro">
+      <div class="card-header">
+        <div class="popular-badge">Most popular</div>
+        <h2>PRO</h2>
+        <div class="price-icons">
+        <i class="fas fa-diamond"></i>
+        </div>
+        <div class="pricing-desc">
+        <div class="currency">$</div>
+        <div class="pricing">17</div>
+        <div class="period">/month</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><span class="fas fa-check"></span>6 days a week of training</li>
+          <li><span class="fas fa-check"></span>Free coffee</li>
+          <li><span class="fas fa-check"></span>Access to equipment</li>
+          <li><span class="fas fa-check"></span>Training classes</li>
+          <li class="disabled"><i class="fas fa-times"></i>Nutrition plan</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div class="price-btn-pro">
+          <a href="">Get started<i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="price-card">
+      <div class="card-header">
+        <h2>PRO PLUS</h2>
+        <div class="price-icons">
+        <i class="fas fa-building"></i>
+        </div>
+        <div class="pricing-desc">
+        <div class="currency">$</div>
+        <div class="pricing">99</div>
+        <div class="period">/month</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><span class="fas fa-check"></span>7 days a week of training</li>
+          <li><span class="fas fa-check"></span>Free coffee</li>
+          <li><span class="fas fa-check"></span>Access to equipment</li>
+          <li><span class="fas fa-check"></span>Training classes</li>
+          <li><span class="fas fa-check"></span>Nutrition plan</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div class="price-btn">
+          <a href="">Get started<i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer section-->
+
+  <footer data-scroll-section>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>BEST GYM</h2>
+      <span><img src="assets/barbel.png" class="colour-png">Best Gym</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde!</p>
+    </div>
+
+    <div class="footer-home-link" id="footer-home-links">
+      <h2>HOME LINKS</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="" data-target="about">About</a></li>
+        <li><a href="" data-target="services">Services</a></li>
+        <li><a href="" data-target="training">Training</a></li>
+        <li><a href="" data-target="Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h2>CONTACT US</h2>
+      <span><i class="fas fa-map-marker-alt"></i>123 main street</span>
+      <span><i class="fas fa-envelope"></i>example@gmail.com</span>
+      <span><i class="fas fa-phone"></i>+1234567890</span>
+    </div>
+
+    <div class="footer-social-links">
+      <h2>SOCIAL LINKS</h2>
+      <a href=""><img src="assets/facebook-logo-button.png"></a>
+      <a href=""><img src="assets/instagram.png"></a>
+      <a href=""><img src="assets/linkedin.png"></a>
+    </div>
+    
+    <div class="footer-bottom">
+    <hr>
+  <span>Designed by <a href="https://github.com/Emmanuelmwiinga">Emmanuel.dev<i class="fab brand fa-github"></i></a>.© 2025 all rights reserved</span>
+  </div>
+  </div>
+</footer>
+  
+  </main>
+  <script src="js/locomotive-scroll.min.js"></script>
+<script src="js/main.js"></script>
+  <script src="js/CustomEase.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
