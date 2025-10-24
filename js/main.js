@@ -1,20 +1,11 @@
-const scrollContainer = document.querySelector('[data-scroll-container]');
-let scroll;
-
-if (scrollContainer) {
-  scroll = new LocomotiveScroll({
-    el: scrollContainer,
-    smooth: true,
-    lerp: 0.1,
-    multiplier: 3.0,
-    smartphone: { smooth: true },
-    tablet: { smooth: true }
-  });
-
-  window.addEventListener('load', () => {
-    scroll.update();
-  });
-}
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+  lerp: 0.1,
+  multiplier: 3.0,
+  smartphone: { smooth: true },
+  tablet: { smooth: true }
+});
 
 // Smooth scrolling for nav links (same-page only)
 document.querySelectorAll('#nav-bar a').forEach(link => {
@@ -22,16 +13,16 @@ document.querySelectorAll('#nav-bar a').forEach(link => {
     const targetID = link.getAttribute('data-target');
     const href = link.getAttribute('href');
 
-    // ✅ Allow normal navigation for external pages like contact.html
+    // ✅ Allow normal navigation for external pages
     if (href && href.endsWith('.html')) {
-      window.location.href = href; // trigger normal page load
+      window.location.href = href; // ← FIX: ensures it loads contact.html
       return;
     }
 
     // ✅ Only prevent default if it’s an on-page scroll
     e.preventDefault();
 
-    if (targetID && scroll) {
+    if (targetID) {
       const targetEl = document.getElementById(targetID);
       if (targetEl) {
         scroll.scrollTo(targetEl, {
@@ -44,6 +35,10 @@ document.querySelectorAll('#nav-bar a').forEach(link => {
   });
 });
 
+window.addEventListener('load', () => {
+  scroll.update();
+});
+
 // Footer smooth scrolling (same logic)
 const footerLinks = document.querySelectorAll('.footer-home-link a');
 
@@ -52,16 +47,16 @@ footerLinks.forEach(link => {
     const targetID = link.dataset.target;
     const href = link.getAttribute('href');
 
-    // ✅ Allow normal navigation for external pages like contact.html
+    // ✅ Allow normal navigation for external pages
     if (href && href.endsWith('.html')) {
-      window.location.href = href;
+      window.location.href = href; // ← FIX added here too
       return;
     }
 
     // ✅ Only prevent default for in-page scroll
     e.preventDefault();
 
-    if (targetID && scroll) {
+    if (targetID) {
       const targetSection = document.getElementById(targetID);
       if (targetSection) scroll.scrollTo(targetSection);
     }
