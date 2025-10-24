@@ -7,21 +7,25 @@ const scroll = new LocomotiveScroll({
   tablet: { smooth: true }
 });
 
+// Helper function to handle navigation to external pages
+function handleExternalLink(link) {
+  const href = link.getAttribute('href');
+  if (href && href.trim().toLowerCase().endsWith('.html')) {
+    window.location.href = href; // ← ensures navigation
+    return true; // signals that navigation happened
+  }
+  return false;
+}
+
 // Smooth scrolling for nav links (same-page only)
 document.querySelectorAll('#nav-bar a').forEach(link => {
   link.addEventListener('click', (e) => {
-    const targetID = link.getAttribute('data-target');
-    const href = link.getAttribute('href');
-
-    // ✅ Allow normal navigation for external pages
-    if (href && href.endsWith('.html')) {
-      window.location.href = href; // ← FIX: ensures it loads contact.html
-      return;
-    }
+    if (handleExternalLink(link)) return; // navigate if it's an external HTML page
 
     // ✅ Only prevent default if it’s an on-page scroll
     e.preventDefault();
 
+    const targetID = link.getAttribute('data-target');
     if (targetID) {
       const targetEl = document.getElementById(targetID);
       if (targetEl) {
@@ -44,18 +48,11 @@ const footerLinks = document.querySelectorAll('.footer-home-link a');
 
 footerLinks.forEach(link => {
   link.addEventListener('click', (e) => {
-    const targetID = link.dataset.target;
-    const href = link.getAttribute('href');
+    if (handleExternalLink(link)) return; // navigate if it's an external HTML page
 
-    // ✅ Allow normal navigation for external pages
-    if (href && href.endsWith('.html')) {
-      window.location.href = href; // ← FIX added here too
-      return;
-    }
-
-    // ✅ Only prevent default for in-page scroll
     e.preventDefault();
 
+    const targetID = link.dataset.target;
     if (targetID) {
       const targetSection = document.getElementById(targetID);
       if (targetSection) scroll.scrollTo(targetSection);
